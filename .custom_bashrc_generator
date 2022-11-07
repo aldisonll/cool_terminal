@@ -1,0 +1,13 @@
+#!/bin/bash
+
+emoji_list=(☄️ 🔥 ❄️ ⚡ ⛄ ☕ 🍖 ⚽ 🎱 🎲 🥇 🧨 💎 💻 💡 📈 🛠 ➡️ ➕ ✅ 🟨)
+emoji_list_length="${#emoji_list[@]}"
+
+random_emoji=${emoji_list[$((RANDOM % emoji_list_length))]}
+
+FILE=~/.bashrc
+if [ -f "$FILE" ]; then
+    rm $FILE
+fi
+
+echo "PS1='$random_emoji \W@$(whoami) $random_emoji $ '" >> ~/.bashrc
