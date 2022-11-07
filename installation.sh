@@ -2,7 +2,8 @@ cp .custom_bashrc_generator ~
 
 FILE=~/../usr/etc/profile.d/mymotd.sh
 if [ -f "$FILE" ]; then
-    rm $FILEfi
+    rm $FILE
+fi
 echo "#!/bin/bash
 bash .custom_bashrc_generator" >> $FILE
 
