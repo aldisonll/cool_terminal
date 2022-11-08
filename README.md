@@ -4,5 +4,5 @@ git clone https://github.com/aldisonll/cool_terminal.git
 ```
 
 ```bash
-cd cool_terminal & bash installation.sh
+sh cool_terminal/installation.sh
 ```
